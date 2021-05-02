@@ -1,0 +1,368 @@
+body.body--modal {
+  margin: 0;
+
+  main {
+    display: none;
+  }
+}
+
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow: auto;
+
+  z-index: 10;
+
+  transition: all 0.3s;
+
+  margin: 0rem 0 5rem;
+
+  &.activated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.modal--back-project {
+  .reward-container {
+    background-color: white;
+
+    width: 85%;
+
+    position: absolute;
+    top: 80px;
+
+    overflow: visible;
+
+    border-radius: 8px;
+
+    padding: 1.75rem 1.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    
+
+    section {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 1.3rem;
+
+      strong {
+        width: 100%;
+
+        font-size: 1.4rem;
+        font-weight: 700;
+
+      }
+
+      button {
+        background: none;
+        
+        height: 100%;
+
+        font-size: 0;
+
+        border: 0;
+
+        cursor: pointer;
+
+        &:hover > img {
+          opacity: 80%;
+
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+
+      color: var(--dark-gray);
+      font-size: 1rem;
+      line-height: 1.5rem;
+
+      margin-bottom: 1.5rem;
+
+    }
+
+    .reward {
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      border: 1px solid var(--dark-gray);
+      border-radius: 8px;
+
+      margin: 1.3rem 0;
+      padding: 1.5rem 0 0;
+
+      cursor: pointer;
+
+      transition: all 0.1s;
+
+      &:last-child {
+        margin-bottom: 1rem;
+
+      }
+
+      .reward-div {
+        padding: 0 1.5rem;
+        
+        section {
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          span {
+            width: 22px;
+            height: 22px;
+
+            margin-right: 0.8rem;
+
+            border: 1px solid var(--dark-gray);
+            border-radius: 50%;
+
+          }
+
+          .title {
+            width: 100%;
+            font-size: 0.9rem;
+            text-align: start;
+    
+            margin-bottom: 0.3rem; 
+
+          }
+
+          .price {
+            width: 100%;
+            font-size: 0.9rem;
+            text-align: start;
+    
+            color: var(--moderate-cyan);
+            font-weight: 500;
+            
+          }
+        }
+
+        .describe {
+          width: 100%;
+          color: var(--dark-gray);
+          font-size: 0.9rem;
+          text-align: start;
+
+          margin-bottom: 0.65rem;
+        }
+
+        .how-many {
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          color: var(--dark-gray);
+          font-size: 1.1rem;
+
+          margin: 0.7rem 0 1.5rem;
+
+          strong {
+            width: auto;
+            color: black;
+            font-size: 1.4rem;
+
+            margin-right: 0.55rem;
+
+          }
+        }
+
+      }
+
+      .pay-container {
+        display: none;
+
+      }
+      
+      &.reward--outstock {
+        opacity: 50%;
+
+        cursor: default;
+
+      }
+
+      &.reward--selected {
+        border: 2px solid var(--moderate-cyan);
+
+        span {
+          position: relative;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            content: '';
+
+            background-color: var(--moderate-cyan);
+            width: 50%;
+            height: 50%;
+  
+            position: absolute;
+            top: 0;
+
+            border-radius: 50%;
+            
+            transform: translate(0%, 50%);
+            
+          }
+        }
+
+        .pay-div {
+          width: 100%;
+          border-top: 1px solid rgba(128, 128, 128, 0.4);
+
+          .pay-container {
+            width: 100%;
+  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+  
+            margin-top: 1rem;
+            padding: 0 1.5rem;
+
+            p {
+              text-align: center;
+
+            }
+
+            div {
+              width: 100%;
+              
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              * {
+                margin: 0 auto;
+
+              }
+
+              input {
+                width: 40%;
+                height: 50px;
+  
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+  
+                display: flex;
+                align-items: center;
+                justify-content: center;
+  
+                position: relative;
+  
+                border-radius: 30px;
+                border: 1px solid var(--moderate-cyan);
+                outline: none;
+  
+              }
+  
+              .button--continue {
+                background-color: var(--moderate-cyan);
+  
+                width: 40%;
+                height: 50px;
+
+                color: white;
+                font-size: 1rem;
+
+                border-radius: 30px;
+  
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal--support {
+  .container {
+    background-color: white;
+
+    width: 85%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 180px;
+
+    padding: 1.5rem 1.5rem 2rem;
+
+    border-radius: 8px;
+
+    img {
+      margin-bottom: 1rem;
+
+    }
+
+    strong {
+      font-size: 1.3rem;
+      font-weight: 700;
+
+      margin-bottom: 1.8rem;
+
+    }
+
+    p {
+      color: var(--dark-gray);
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.7rem;
+      
+
+      margin-bottom: 2rem;
+
+    }
+
+    .back-close-modal {
+      background-color: var(--moderate-cyan);
+
+      width: 50%;
+      height: 60px;
+
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+
+      border: 0;
+      border-radius: 30px;
+
+    }
+
+  }
+
+}
