@@ -1,8 +1,10 @@
+const body = document.body
+
 const modalRewards = document.querySelectorAll('.modal .reward')
 const modalContainerBack = document.querySelector('.modal--back-project')
 
-const body = document.body
 const btnBack = document.querySelector('button.button--back')
+const btnMenu = document.querySelector('button.button--menu')
 const btnCloseBack = document.querySelectorAll('button.back-close-modal')
 
 const btnContinue = document.querySelectorAll('button.button--continue')
@@ -21,6 +23,8 @@ btnContinue.forEach(button => {
   button.addEventListener('click', donateFunction)
 })
 
+btnMenu.addEventListener('click', menuOpen)
+
 function rewardSelected() {
   if (this.classList[1] === "reward--outstock") return
 
@@ -31,6 +35,12 @@ function rewardSelected() {
 function modalBack() {
   body.classList.toggle('body--modal')
   modalContainerBack.classList.toggle('activated')
+}
+
+function menuOpen() {
+  const modalMenu = document.querySelector('.modal--navbar')
+  body.classList.add('body--modal')
+  modalMenu.classList.toggle('activated')
 }
 
 function donateFunction() {

@@ -10,39 +10,56 @@
   <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
   <link rel="stylesheet" href="./styles/main.css" />
   <link rel="stylesheet" href="./styles/modal/modal.css" />
+  <link rel="stylesheet" href="./styles/responsive.css" />
 
   <title>Frontend Mentor | Crowdfunding product page</title>
 
 </head>
 <body>
+  <nav class="navbar">
+    <img class="logo" src="./assets/logo.svg" alt="logo icon" />
+
+    <ul>
+      <li>About</li>
+      <li>Discover</li>
+      <li>Get Started</li>
+    </ul>
+    <button class="button button--menu">
+      <img src="./assets/icon-hamburger.svg" alt="hamburger icon" />
+    </button>
+  </nav>
+
   <header>
     <h1>Mastercraft Bamboo Monitor Riser</h1>
     <p>A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
     
     <section>
       <button class="button button--back" type="button">Back this project</button>
-      <button class="button button--save">
+      <div class="button button--save">
         <img src="./assets/icon-bookmark.svg" alt="bookmark icon" />
-      </button>
+        <strong>Bookmark<li>ed</li></strong>
+      </div>
     </section>
   </header>
 
   <main>
     <div class="funds-container">
-      <div class="info">
-        <h2>$89,914</h2>
-        <h6>of $100,000 backed</h6>
-      </div>
-
-      <div class="info">
-        <h2>5,007</h2>
-        <h6>total backers</h6>
-      </div>
-
-      <div class="info">
-        <h2>56</h2>
-        <h6>days left</h6>
-      </div>
+      <section>
+        <div class="info">
+          <h2>$89,914</h2>
+          <h6>of $100,000 backed</h6>
+        </div>
+  
+        <div class="info">
+          <h2>5,007</h2>
+          <h6>total backers</h6>
+        </div>
+  
+        <div class="info">
+          <h2>56</h2>
+          <h6>days left</h6>
+        </div>
+      </section>
 
       <section class="progress-bar"></section>
     </div>
@@ -68,8 +85,10 @@
       </p>
 
       <div class="reward">
-        <h3 class="title">Bamboo Stand</h3>
-        <h4 class="price">Pledge $25 or more</h4>
+        <div class="infos">
+          <h3 class="title">Bamboo Stand</h3>
+          <h4 class="price">Pledge $25 or more</h4>
+        </div>
 
         <p class="describe">
           You get an ergonomic stand made of natural
@@ -78,18 +97,22 @@
           member list.
         </p>
 
-        <section>
-          <strong>101</strong>
-          left
-        </section>
-
-        <button class="button button--reward">Select Reward</button>
+        <div class="select-container">
+          <section>
+            <strong>101</strong>
+            left
+          </section>
+  
+          <button class="button button--reward">Select Reward</button>
+        </div>
 
       </div>
 
       <div class="reward">
-        <h3 class="title">Black Edition Stand</h3>
-        <h4 class="price">Pledge $75 or more</h4>
+        <div class="infos">
+          <h3 class="title">Black Edition Stand</h3>
+          <h4 class="price">Pledge $75 or more</h4>
+        </div>
 
         <p class="describe">
           You get a Black Special Edition computer stand
@@ -97,18 +120,21 @@
           Backer member list. Shipping is included.
         </p>
 
-        <section>
-          <strong>64</strong>
-          left
-        </section>
+        <div class="select-container">
+          <section>
+            <strong>64</strong>
+            left
+          </section>
 
-        <button class="button button--reward">Select Reward</button>
-
+          <button class="button button--reward">Select Reward</button>
+        </div>
       </div>
 
       <div class="reward reward--outstock">
-        <h3 class="title">Mahogany Special Edition</h3>
-        <h4 class="price">Pledge $200 or more</h4>
+        <div class="infos">
+          <h3 class="title">Mahogany Special Edition</h3>
+          <h4 class="price">Pledge $200 or more</h4>
+        </div>
 
         <p class="describe">
           You get two Special Edition Mahogany stands,
@@ -117,19 +143,20 @@
           Shipping is included.
         </p>
 
-        <section>
-          <strong>0</strong>
-          left
-        </section>
+        <div class="select-container">
+          <section>
+            <strong>0</strong>
+            left
+          </section>
 
-        <button class="button button--reward">Select Reward</button>
-
+          <button class="button button--reward">Select Reward</button>
+        </div>
       </div>
     </div>
   </main>
 
   <div class="modal modal--back-project">
-    <div class="reward-container">
+    <div class="container">
       <section>
         <strong>Back this project</strong>
         <button class="back-close-modal" type="button">
@@ -174,7 +201,7 @@
         
       </div>
 
-      <div class="reward reward--selected">
+      <div class="reward">
         <div class="reward-div">
           <section>
             <span class="selected-button"></span>
@@ -306,6 +333,22 @@
       <button class="button back-close-modal">Got it!</button>
 
     </section>
+  </div>
+
+  <div class="modal modal--navbar">
+    <section>
+      <img class="logo" src="./assets/logo.svg" alt="logo icon" />
+  
+      <button class="back-close-modal">
+        <img src="./assets/icon-close-menu.svg" alt="close menu icon" />
+      </button>
+    </section>
+
+    <ul class="container">
+      <li>About</li>
+      <li>Discover</li>
+      <li>Get Started</li>
+    </ul>
   </div>
   
   <script src="./index.js"></script>

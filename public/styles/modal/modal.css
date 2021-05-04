@@ -1,9 +1,21 @@
 body.body--modal {
   margin: 0;
+  overflow: hidden;
 }
 
-body.body--modal main {
+body.body--modal nav {
   display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .modal {
@@ -35,18 +47,18 @@ body.body--modal main {
           justify-content: center;
 }
 
-.modal--back-project .reward-container {
+.modal--back-project .container {
   background-color: white;
   width: 85%;
   position: absolute;
-  top: 80px;
+  top: 60px;
   overflow: visible;
   border-radius: 8px;
   padding: 1.75rem 1.5rem 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.modal--back-project .reward-container section {
+.modal--back-project .container section {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,13 +72,13 @@ body.body--modal main {
   margin-bottom: 1.3rem;
 }
 
-.modal--back-project .reward-container section strong {
+.modal--back-project .container section strong {
   width: 100%;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
-.modal--back-project .reward-container section button {
+.modal--back-project .container section button {
   background: none;
   height: 100%;
   font-size: 0;
@@ -74,11 +86,11 @@ body.body--modal main {
   cursor: pointer;
 }
 
-.modal--back-project .reward-container section button:hover > img {
+.modal--back-project .container section button:hover > img {
   opacity: 80%;
 }
 
-.modal--back-project .reward-container p {
+.modal--back-project .container p {
   width: 100%;
   color: var(--dark-gray);
   font-size: 1rem;
@@ -86,7 +98,8 @@ body.body--modal main {
   margin-bottom: 1.5rem;
 }
 
-.modal--back-project .reward-container .reward {
+.modal--back-project .container .reward {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,15 +122,15 @@ body.body--modal main {
   transition: all 0.1s;
 }
 
-.modal--back-project .reward-container .reward:last-child {
+.modal--back-project .container .reward:last-child {
   margin-bottom: 1rem;
 }
 
-.modal--back-project .reward-container .reward .reward-div {
+.modal--back-project .container .reward .reward-div {
   padding: 0 1.5rem;
 }
 
-.modal--back-project .reward-container .reward .reward-div section {
+.modal--back-project .container .reward .reward-div section {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,22 +143,23 @@ body.body--modal main {
           justify-content: flex-start;
 }
 
-.modal--back-project .reward-container .reward .reward-div section span {
+.modal--back-project .container .reward .reward-div section span {
   width: 22px;
   height: 22px;
+  font-size: 0;
   margin-right: 0.8rem;
   border: 1px solid var(--dark-gray);
   border-radius: 50%;
 }
 
-.modal--back-project .reward-container .reward .reward-div section .title {
+.modal--back-project .container .reward .reward-div section .title {
   width: 100%;
   font-size: 0.9rem;
   text-align: start;
   margin-bottom: 0.3rem;
 }
 
-.modal--back-project .reward-container .reward .reward-div section .price {
+.modal--back-project .container .reward .reward-div section .price {
   width: 100%;
   font-size: 0.9rem;
   text-align: start;
@@ -153,15 +167,15 @@ body.body--modal main {
   font-weight: 500;
 }
 
-.modal--back-project .reward-container .reward .reward-div .describe {
+.modal--back-project .container .reward .reward-div .describe {
   width: 100%;
   color: var(--dark-gray);
   font-size: 0.9rem;
   text-align: start;
-  margin-bottom: 0.65rem;
+  margin-bottom: 1rem;
 }
 
-.modal--back-project .reward-container .reward .reward-div .how-many {
+.modal--back-project .container .reward .reward-div .how-many {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,27 +191,27 @@ body.body--modal main {
   margin: 0.7rem 0 1.5rem;
 }
 
-.modal--back-project .reward-container .reward .reward-div .how-many strong {
+.modal--back-project .container .reward .reward-div .how-many strong {
   width: auto;
   color: black;
   font-size: 1.4rem;
   margin-right: 0.55rem;
 }
 
-.modal--back-project .reward-container .reward .pay-container {
+.modal--back-project .container .reward .pay-container {
   display: none;
 }
 
-.modal--back-project .reward-container .reward.reward--outstock {
+.modal--back-project .container .reward.reward--outstock {
   opacity: 50%;
   cursor: default;
 }
 
-.modal--back-project .reward-container .reward.reward--selected {
+.modal--back-project .container .reward.reward--selected {
   border: 2px solid var(--moderate-cyan);
 }
 
-.modal--back-project .reward-container .reward.reward--selected span {
+.modal--back-project .container .reward.reward--selected span {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,7 +224,7 @@ body.body--modal main {
           justify-content: center;
 }
 
-.modal--back-project .reward-container .reward.reward--selected span::before {
+.modal--back-project .container .reward.reward--selected span::before {
   content: '';
   background-color: var(--moderate-cyan);
   width: 50%;
@@ -222,12 +236,12 @@ body.body--modal main {
           transform: translate(0%, 50%);
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div {
+.modal--back-project .container .reward.reward--selected .pay-div {
   width: 100%;
   border-top: 1px solid rgba(128, 128, 128, 0.4);
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,11 +260,11 @@ body.body--modal main {
   padding: 0 1.5rem;
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container p {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container p {
   text-align: center;
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container div {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,11 +277,11 @@ body.body--modal main {
           justify-content: center;
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container div * {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container div * {
   margin: 0 auto;
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container div input {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container div input {
   width: 40%;
   height: 50px;
   font-size: 1rem;
@@ -288,9 +302,9 @@ body.body--modal main {
   outline: none;
 }
 
-.modal--back-project .reward-container .reward.reward--selected .pay-div .pay-container div .button--continue {
+.modal--back-project .container .reward.reward--selected .pay-div .pay-container div .button--continue {
   background-color: var(--moderate-cyan);
-  width: 40%;
+  width: 50%;
   height: 50px;
   color: white;
   font-size: 1rem;
@@ -326,6 +340,7 @@ body.body--modal main {
 .modal--support .container strong {
   font-size: 1.3rem;
   font-weight: 700;
+  text-align: center;
   margin-bottom: 1.8rem;
 }
 
@@ -346,5 +361,82 @@ body.body--modal main {
   font-weight: 700;
   border: 0;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+.modal--navbar section {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 0px;
+}
+
+.modal--navbar section .logo {
+  height: 25px;
+}
+
+.modal--navbar section button {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal--navbar section button img {
+  width: 18px;
+  height: 18px;
+}
+
+.modal--navbar .container {
+  background-color: white;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  position: absolute;
+  top: 80px;
+  border-radius: 8px;
+}
+
+.modal--navbar .container li {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: start;
+  padding: 1.4rem 1.2rem;
+  cursor: pointer;
+}
+
+.modal--navbar .container li:nth-child(2) {
+  border-top: 1px solid #80808050;
+  border-bottom: 1px solid #80808050;
 }
 /*# sourceMappingURL=modal.css.map */

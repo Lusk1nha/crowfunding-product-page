@@ -1,0 +1,219 @@
+@media (min-width: 600px) {
+  body::before {
+    background-image: url("../assets/image-hero-desktop.jpg");
+  }
+  .navbar ul {
+    max-width: 350px;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    list-style: none;
+  }
+  .navbar ul li {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .navbar .button--menu {
+    display: none;
+    pointer-events: none;
+  }
+  header,
+  main {
+    max-width: 700px;
+  }
+  header h1 {
+    font-size: 1.65rem;
+  }
+  header section {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header section .button.button--back {
+    background-color: var(--moderate-cyan);
+    width: 40%;
+  }
+  header section .button.button--save {
+    background-color: white;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+  }
+  header section .button.button--save img {
+    z-index: 10;
+    cursor: pointer;
+  }
+  header section .button.button--save strong {
+    background-color: #efeff5;
+    width: 60%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: black;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    border-radius: 2px 30px 30px 2px;
+    margin-left: -15px;
+    list-style: none;
+    cursor: pointer;
+  }
+  main .funds-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .funds-container section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .funds-container section .info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    border-right: 1px solid rgba(128, 128, 128, 0.5);
+    margin-right: 3rem;
+  }
+  main .funds-container section .info:nth-child(1), main .funds-container section .info:nth-child(2) {
+    border-bottom: 0;
+  }
+  main .funds-container section .info:nth-child(3) {
+    border: 0;
+  }
+  main .about-container {
+    padding: 2rem 2rem 1.5rem;
+  }
+  main .about-container .reward .infos {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  main .about-container .reward .infos .title {
+    font-size: 1.2rem;
+  }
+  main .about-container .reward .infos .price {
+    text-align: end;
+  }
+  main .about-container .reward .describe {
+    margin-bottom: 1.4rem;
+  }
+  main .about-container .reward .select-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .modal .container {
+    max-width: 700px;
+  }
+  .modal--back-project .reward {
+    position: relative;
+  }
+  .modal--back-project .reward .reward-div section {
+    width: 100%;
+    z-index: 10;
+  }
+  .modal--back-project .reward .reward-div section div {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal--back-project .reward .reward-div section div h3 {
+    margin-right: 1rem;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+  .modal--back-project .reward .reward-div section div h3:hover {
+    color: var(--moderate-cyan);
+  }
+  .modal--back-project .reward .reward-div .how-many {
+    width: 10% !important;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    margin: 0;
+    padding: 1rem;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  .modal--back-project .reward .pay-container {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .modal--back-project .reward .pay-container * {
+    margin: 0;
+  }
+  .modal--back-project .reward .pay-container p {
+    text-align: start !important;
+  }
+  .modal--support .container {
+    max-width: 600px;
+  }
+  .modal--support .container button {
+    max-width: 150px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
