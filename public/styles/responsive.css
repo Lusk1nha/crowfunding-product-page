@@ -43,7 +43,7 @@
   }
   header section .button.button--save {
     background-color: white;
-    width: 40%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
